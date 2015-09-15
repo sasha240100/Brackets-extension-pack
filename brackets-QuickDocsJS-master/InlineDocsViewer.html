@@ -1,0 +1,72 @@
+<div class="js-prop-defn" tabIndex="0"> <!-- tabIndex needed: otherwise click focuses CodeMirror scroller and Esc won't work -->
+    <div class="js-prop-summary">
+        <span class="h1">{{propName}}</span>
+        <br>
+         {{#creationExtras}}
+            <span class="creationExtras">created:</span>
+            {{#createDate}}
+                <span class="createDate">{{createDate}}</span>
+            {{/createDate}}
+            {{#author}}
+                <span class="author">by {{author}}</span>
+            {{/author}}
+        {{/creationExtras}}
+        {{#modifiedExtras}}
+            <div class="clear"/>
+            <span class="modifiedExtras">modified:</span>
+            {{#lastmodifiedDate}}
+                <span class="lastmodifiedDate">{{lastmodifiedDate}}</span>
+            {{/lastmodifiedDate}}
+            {{#lastmodifiedBy}}
+                <span class="lastmodifiedBy">by {{lastmodifiedBy}}</span>
+            {{/lastmodifiedBy}}
+        {{/modifiedExtras}}
+        
+        <div class="clear"/>
+       
+        <div>{{{summary}}}</div>
+        <code class="syntax-code" style="{{SyntaxStyle}}"><br>{{{syntax}}}</code>
+        <div style="{{ReturnStyle}}"><br>
+        {{#returnValues}}
+        	<b>Returns:</b>	<span class="paramtype">{{type}}</span><br>
+        	{{description}}
+        {{/returnValues}}</div>
+    </div>
+    <div class="divider-holder no-focus">
+        <div class="divider"></div>
+    </div>
+    <div class="js-prop-values quiet-scrollbars">
+        <div class="scroller" tabIndex="0"> <!-- tabIndex needed: otherwise can't be focused on open or via click -->
+            <dl>
+             {{#propValues}}
+                <dt>
+					<span class="optional bracket" style="{{cssOptional}}">[</span>
+						{{name}}
+					<span class="optional bracket" style="{{cssOptional}}">]</span>
+					<span class="paramtype">{{type}}</span>
+                </dt>
+                <dd style="{{cssOptionalDefault}}" class="optional">{{default}}</dd>
+                <dd>{{{description}}}</dd>
+				<dl class="propsForProps">
+					{{#propsForProps}}
+					<dt>
+						<span class="optional bracket" style="{{cssOptional}}">[</span>
+							{{name}}
+						<span class="optional bracket" style="{{cssOptional}}">]</span>
+						<span class="paramtype">{{type}}</span>
+					</dt>
+					<dd style="{{cssOptionalDefault}}" class="optional">{{default}}</dd>
+					<dd>{{{description}}}</dd>
+					{{/propsForProps}}
+				</dl>
+            {{/propValues}}
+            </dl>
+        </div>
+    </div>
+    <div class="content-bottom"></div>
+    <div class="bottom-links" style="{{BottomStyle}}">
+    <a class="bottom-link" id="more-info" href="{{url}}" title="{{url}}">{{Strings.DOCS_MORE_LINK}}</a>
+    <a class="bottom-link" id="js-info" href="{{infoUrl}}" title="">{{infoUrlName}}</a>
+    <a class="bottom-link" id="license-js-info" href="{{licenseUrl}}" title="License">{{licenseUrlName}}</a>
+    </div>
+</div>

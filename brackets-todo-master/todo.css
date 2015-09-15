@@ -1,0 +1,212 @@
+.brackets-todo table {
+	width: 100%;
+	position: relative;
+}
+
+.brackets-todo tr {
+	cursor: pointer;
+}
+
+.brackets-todo td {
+	vertical-align: middle;
+}
+
+.brackets-todo .done {
+	opacity: .5;
+}
+
+.brackets-todo .done .message {
+	text-decoration: line-through;
+}
+
+/*--- TABLE ROWS ---*/
+.brackets-todo .disclosure-triangle {
+	display: inline-block;
+	width: 18px;
+	height: 16px;
+	background-position: 8px 4px;
+}
+
+.brackets-todo .expanded .disclosure-triangle {
+	background-position: 6px 4px;
+	-webkit-transform: translateZ( 0 ) rotate( 90deg );
+}
+
+.brackets-todo .line {
+	width: 2em;
+	padding: 0 0 0 .8em;
+	text-align: right;
+}
+
+.brackets-todo .tag {
+	width: 5.2em;
+	height: 1.8em;
+	padding: 0 .5em;
+}
+
+.brackets-todo .tag span {
+	display: inline-block;
+	width: 	5.2em;
+	margin: 0 .1em;
+	padding: 0;
+	background-color: #555;
+	color: #fff;
+	text-align: center;
+	text-transform: uppercase;
+	border-radius: .5em;
+}
+
+/*--- ICON ---*/
+#brackets-todo-icon {
+	background-image: url( 'images/todo-icon.svg' );
+}
+
+#brackets-todo-icon.active {
+	background-position: 0 -24px;
+}
+
+/*--- TOOLBAR ---*/
+.brackets-todo .tools {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 40px;
+	margin-left: -.5em;
+	line-height: 24px;
+	text-align: right;
+}
+
+.brackets-todo .tools > div {
+	display: inline;
+}
+
+.brackets-todo .tools a {
+	display: inline-block;
+	margin-left: .25em;
+	text-decoration: none;
+}
+
+.brackets-todo .icons a {
+	width: 18px;
+	height: 18px;
+	line-height: 1;
+	text-align: center;
+	border-radius: 3px;
+}
+
+.brackets-todo .icons svg {
+	width: 13px;
+	height: 13px;
+	vertical-align: middle;
+	fill: #3e3e3e;
+	pointer-events: none;
+}
+
+.brackets-todo .expand-all svg {
+	width: 15px;
+	height: 15px;
+}
+
+.dark .brackets-todo .icons svg {
+	fill: #ccc;
+}
+
+.brackets-todo .icons a:hover {
+	opacity: .5;
+	background-color: #fff;
+}
+
+.dark .brackets-todo .icons a:hover {
+	background-color: #000;
+}
+
+.brackets-todo .tags {
+	vertical-align: middle;
+	font-size: 0.8em;
+	text-transform: uppercase;
+}
+
+.brackets-todo .tags a {
+	padding: 0 .25em;
+	line-height: 18px;
+	border-radius: 3px;
+	color: #666;
+}
+
+.brackets-todo .tags .visible,
+.brackets-todo .tags a:hover {
+	opacity: .8;
+	background-color: #fff;
+}
+
+.brackets-todo .tags .visible {
+	opacity: .6;
+}
+
+.brackets-todo .tags .count {
+	padding: 0 .15em;
+}
+
+/*--- PROJECT WIDE SEARCH ---*/
+.brackets-todo.current .icons .expand-all,
+.brackets-todo.current .icons .collapse-all,
+.brackets-todo.current .file-name {
+	display: none;
+}
+
+.brackets-todo.current tr.file > td {
+	padding: 0;
+}
+
+.brackets-todo.current .todos {
+	margin-top: 0;
+}
+
+.brackets-todo tr.file > td {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.brackets-todo .todos {
+	display: none;
+	margin-top: 4px;
+}
+
+.brackets-todo .expanded .todos {
+	display: table;
+}
+
+/*--- SETTINGS DIALOG ---*/
+.brackets-todo-settings-dialog label {
+	width: 100%;
+	display: inline-block;
+}
+
+.brackets-todo-settings-dialog fieldset {
+	margin-bottom: 1em;
+}
+
+.brackets-todo-settings-dialog legend {
+	margin: 0 0 .25em;
+	color: inherit;
+}
+
+.brackets-todo-settings-dialog input {
+	vertical-align: middle;
+	margin-bottom: 0;
+}
+
+.brackets-todo-settings-dialog label span {
+	min-width: 8em;
+	display: inline-block;
+}
+
+.brackets-todo-settings-dialog .horizontal label {
+	width: auto;
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.brackets-todo-settings-dialog .invalid {
+	border-color: #c95353;
+}

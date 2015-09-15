@@ -1,0 +1,36 @@
+#toolbar-ftpsync {
+  display:inline-block;
+  background-image:url('img/upload.svg');
+  background-size: calc(100% - 6px) auto;
+  background-position: center center;
+}
+
+.ftp-dialog .modal-header {
+  background-color: rgb(60, 63, 65);
+}
+
+.ftp-dialog .dialog-title {
+  color: white;
+}
+
+.ftp-dialog .input-prepend {
+  padding-left: 10px;
+}
+
+.ftp-dialog #port {
+  width: 32px; 
+}
+
+.ftp-dialog .dialog-button[data-button-id='browse'] {
+  margin-left: 11px;
+}
+
+.ftp-dialog #status {
+  position: relative;
+  top: 5px;
+}
+
+.ftp-dialog .btn-group > .btn {
+  font-size: 16px;
+  width: 80px;
+}
